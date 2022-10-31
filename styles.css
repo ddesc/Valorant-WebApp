@@ -1,0 +1,103 @@
+h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    position: sticky;
+    height: 40px;
+    top: 0;
+    background-color: rgba(255,255,255,0.9);
+    padding: 10px;
+}
+
+.hamburger {
+    position: absolute;
+}
+
+.header_text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.form {
+    position: sticky;
+    top: 60px;
+    height: fit-content;
+    width: 30%;
+    display: flex;
+}
+
+.cards {
+    width: 70%;
+}
+
+.inputs {
+    padding: 50px;
+}
+
+.inputs > div {
+    padding: 2px 0px;
+}
+
+.username_input, .rank_input {
+    display: flex;
+}
+
+.username_input label, .rank_input label {
+    width: 135px;
+}
+
+.username_input input, .rank_input select {
+    width: calc(100% - 135px);
+    padding: 0;
+    box-sizing: unset;
+    border-width: 1px;
+}
+
+.agent_input, .skin_input {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+
+.agent_input label, .skin_input label {
+    width: 100%;
+}
+
+.agent_input > div, .skin_input > div {
+    width: 33%;
+}
+
+#playstyle {
+    width: 100%;
+}
+
+.card {
+    border: 1px solid;
+    margin: 50px;
+}
+
+.card > div {
+    display: flex;
+}
+
+.agent_icon {
+    width: 200px;
+}
+
+.rank_icon {
+    width: 100px;
+}

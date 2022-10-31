@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Valorant WebApp</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="hamburger">
+            <svg viewBox="0 0 100 80" width="40" height="40">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+            </svg>
+        </div>
+        <div class="header_text">
+            <h1>Valorant WebApp</h1>
+        </div>
+    </section>
+    <section class="main">
+        <div class="form">
+            <form class="inputs">
+                <div class="username_input">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username">
+                </div>
+                <div class="rank_input">
+                    <label for="rank">Rank: </label>
+                    <select id="rank">
+                        <option disabled selected value>Select your rank</option>
+                        <option value="iron">Iron</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                        <option value="plat">Plat</option>
+                        <option value="diamond">Diamond</option>
+                        <option value="ascendant">Ascendant</option>
+                        <option value="immortal">Immortal</option>
+                        <option value="radiant">Radiant</option>
+                    </select>
+                </div>
+                <div class="agent_input">
+                    <label>Main Agent: </label><br>
+                    <div>
+                        <input type="radio" id="jett" name="main_agent" value="jett">
+                        <label for="jett">Jett</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" id="reyna" name="main_agent" value="reyna">
+                        <label for="reyna">Reyna</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" id="chamber" name="main_agent" value="chamber">
+                        <label for="chamber">Chamber</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="chamber" name="main_agent" value="chamber">
+                        <label for="chamber">Chamber</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="chamber" name="main_agent" value="chamber">
+                        <label for="chamber">Chamber</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="chamber" name="main_agent" value="chamber">
+                        <label for="chamber">Chamber</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="chamber" name="main_agent" value="chamber">
+                        <label for="chamber">Chamber</label>
+                    </div>
+                </div>
+                <div class="skin_input">
+                    <label>Favourite Skins: </label><br>
+                    <div>
+                        <input type="checkbox" id="reaver" value="reaver">
+                        <label for="reaver">Reaver</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ion" value="ion">
+                        <label for="ion">Ion</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="glitchpop" value="glitchpop">
+                        <label for="glitchpop">Glitchpop</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="origin" value="origin">
+                        <label for="origin">Origin</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="prime" value="prime">
+                        <label for="prime">Prime</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="oni" value="oni">
+                        <label for="oni">Oni</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="oni" value="oni">
+                        <label for="oni">Oni</label><br>
+                    </div>
+                </div>
+                <div class="playstyle_input">
+                    <label for="playstyle">Describe your playstyle: </label>
+                    <textarea id="playstyle" rows="5"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div>
+                    <div>
+                        <img src="./agent-icons/Chamber_icon.webp" class="agent_icon">
+                    </div>
+                    <div>
+                        <h3>nomsE</h3>
+                        <div>
+                            <img src="./rank-icons/Ascendant_3_Rank.webp" class="rank_icon">
+                            <h4>
+                                Ascendant
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>
+                            Favourite skins:
+                        </h4>
+                    </div>
+                    <div>
+                        <p>
+                            Prime, Ion, Reaver
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>
+                            Playstyle:
+                        </h4>
+                    </div>
+                    <div>
+                        <p>
+                            Baits
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div>
+                        <img src="./agent-icons/Jett_icon.webp" class="agent_icon">
+                    </div>
+                    <div>
+                        <h3>CLB Illxgical</h3>
+                        <div>
+                            <img src="./rank-icons/Ascendant_3_Rank.webp" class="rank_icon">
+                            <h4>
+                                Ascendant
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>
+                            Favourite skins:
+                        </h4>
+                    </div>
+                    <div>
+                        <p>
+                            Reaver, Oni, Ion
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>
+                            Playstyle:
+                        </h4>
+                    </div>
+                    <div>
+                        <p>
+                            Dogshit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div>
+                        <img src="./agent-icons/Jett_icon.webp" class="agent_icon">
+                    </div>
+                    <div>
+                        <h3>Kimochi^^</h3>
+                        <div>
+                            <img src="./rank-icons/Diamond_3_Rank.webp" class="rank_icon">
+                            <h4>
+                                Diamond
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>
+                            Favourite skins:
+                        </h4>
+                    </div>
+                    <div>
+                        <p>
+                            Oni, Oni, Oni
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>
+                            Playstyle:
+                        </h4>
+                    </div>
+                    <div>
+                        <p>
+                            God
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
