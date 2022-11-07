@@ -1,3 +1,7 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 h1 {
     font-size: 60px;
     margin: 0;
@@ -5,14 +9,18 @@ h1 {
 
 body {
     margin: 0;
+    /* background-color: rgb(21, 32, 43); */
+    background-color: rgb(13, 22, 32);
+    color: #EFEFEF;
 }
 
 .header {
     position: sticky;
     height: 40px;
     top: 0;
-    background-color: rgba(255,255,255,0.9);
-    padding: 10px;
+    background-image: linear-gradient(rgb(47, 61, 92), transparent);
+    padding: 20px;
+    padding-top: 50px;
 }
 
 .hamburger {
@@ -28,16 +36,23 @@ body {
 
 .main {
     display: flex;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
 .form {
     position: sticky;
-    top: 60px;
+    top: 140px;
     height: fit-content;
     width: 30%;
     display: flex;
+    background-color: rgb(30, 39, 50);
+    box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%);
+    border-radius: 10px;
+}
+
+.form_submit_button {
+    
 }
 
 .cards {
@@ -86,12 +101,55 @@ body {
 }
 
 .card {
-    border: 1px solid;
     margin: 50px;
+    background-color: rgb(30, 39, 50);
+    box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%);
+    border-radius: 10px;
+    display: flex;
+    padding: 30px 15px;
 }
 
-.card > div {
+.card:first-child {
+    margin-top: 30px;
+}
+
+.agent_icon_wrapper {
     display: flex;
+    align-items: center;
+}
+
+.card_text_wrapper {
+    width: calc(100% - 300px);
+    padding: 0px 20px;
+}
+
+.rank_icon_wrapper {
+    width: 100px;
+}
+
+.card_username_wrapper {
+    text-align: center;
+}
+
+.card_username_wrapper h3, .header {
+    margin-top: 0;
+    color: #b3764d;
+}
+
+.card_fav_skins_wrapper {
+    display: flex;
+}
+
+.card_fav_skins_wrapper p, .card_fav_skins_wrapper h4 {
+    margin: 0;
+}
+
+.card_fav_skins_title {
+    margin-right: 5px;
+}
+
+.card_playstyle_wrapper p, .card_playstyle_wrapper h4 {
+    margin: 0;
 }
 
 .agent_icon {
