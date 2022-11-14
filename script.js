@@ -68,7 +68,7 @@ const renderCards = () => {
     cards.innerHTML = "";
     cardsArr.sort((a, b) => a.rank - b.rank);
     cardsArr.map((card) => {
-        cards.append(CreateCardElement(card));
+        cards.append(createCardElement(card));
     });
 };
 
