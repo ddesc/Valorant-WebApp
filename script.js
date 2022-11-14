@@ -56,7 +56,7 @@ const cardHTML = (card) => {
     `;
 };
 
-const CreateCardElement = (card) => {
+const createCardElement = (card) => {
     let newCardElement = document.createElement("div");
     newCardElement.setAttribute("class", "card");
     newCardElement.innerHTML = cardHTML(card);
@@ -77,15 +77,11 @@ const addNewCard = (Card) => {
     renderCards();
 };
 
-window.onload = function () {
-    renderCards();
-};
-
 const addToCards = (event) => {
     var username = document.getElementById("username").value;
     var rank = document.getElementById("rank").value;
     var mainAgent = document.querySelector('input[name="main_agent"]:checked')?.value;
-    var favouriteSkins = commaDelimitCheckedItems(document.getElementsByName('fav_skin'));
+    var favouriteSkins = CommaDelimitCheckedItems(document.getElementsByName('fav_skin'));
     var playstyle = document.getElementById("playstyle").value;
 
     if (!username || !rank || !mainAgent || !favouriteSkins || !playstyle) {
@@ -97,7 +93,11 @@ const addToCards = (event) => {
     }
 };
 
-function commaDelimitCheckedItems(checkgroup) {
+window.onload = function () {
+    renderCards();
+};
+
+function CommaDelimitCheckedItems(checkgroup) {
     var checkgroup = checkgroup;
     var s = [];
     for (var i = 0; i < checkgroup.length; i++) {
@@ -108,7 +108,7 @@ function commaDelimitCheckedItems(checkgroup) {
     return s.length == 0 ? "None" : s.join(', '); 
 }
 
-function checkboxLimit(checkgroup, limit) {
+function CheckboxLimit(checkgroup, limit) {
     var checkgroup = checkgroup;
     var limit = limit;
     for (var i = 0; i < checkgroup.length; i++) {
@@ -124,4 +124,4 @@ function checkboxLimit(checkgroup, limit) {
     }
 }
 
-checkboxLimit(document.forms.inputs.fav_skin, 3);
+CheckboxLimit(document.forms.inputs.fav_skin, 3);
