@@ -18,7 +18,9 @@ body {
     position: sticky;
     height: 40px;
     top: 0;
-    background-image: linear-gradient(rgb(47, 61, 92), transparent);
+    /* background-image: linear-gradient(rgb(47, 61, 92), transparent); */
+    background-image: linear-gradient(to bottom, rgba(47, 61, 92, 1), rgba(13, 22, 32, 0.3));
+    /* opacity: 0.5; */
     padding: 20px;
     padding-top: 50px;
 }
@@ -56,7 +58,7 @@ body {
 }
 
 .inputs {
-    padding: 50px;
+    padding: 40px;
 }
 
 .inputs > div {
@@ -103,6 +105,19 @@ body {
     border-radius: 10px;
     display: flex;
     padding: 30px 15px;
+}
+
+.card:hover {
+    background-color: rgb(55, 70, 90);
+    box-shadow: 0 10px 10px 0 rgb(0 0 0 / 16%);
+    /* margin: 30px; */
+    /* width: 90%; */
+    transform: scale(1.05);
+    transition: .2s transform ease-in;
+}
+
+.card:hover .agent_icon {
+    filter: drop-shadow(6px 6px 6px #b3764d)
 }
 
 .card:first-child {
