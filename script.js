@@ -84,13 +84,8 @@ const addToCards = (event) => {
     var favouriteSkins = CommaDelimitCheckedItems(document.getElementsByName('fav_skin'));
     var playstyle = document.getElementById("playstyle").value;
 
-    if (!username || !rank || !mainAgent || !favouriteSkins || !playstyle) {
-        alert("You're missing an input!")
-    }
-    else {
-        addNewCard(new Card(username, rank, mainAgent, favouriteSkins, playstyle));
-        document.getElementById("inputs").reset();
-    }
+    addNewCard(new Card(username, rank, mainAgent, favouriteSkins, playstyle));
+    document.getElementById("inputs").reset();
 };
 
 window.onload = function () {
@@ -98,13 +93,7 @@ window.onload = function () {
 };
 
 function CommaDelimitCheckedItems(checkgroup) {
-    var checkgroup = checkgroup;
-    var s = [];
-    for (var i = 0; i < checkgroup.length; i++) {
-        if (checkgroup[i].checked) {
-            s.push(checkgroup[i].value);
-        }
-    }
+    let s = [...checkgroup].filter(el => el.checked).map(el => el.value);
     return s.length == 0 ? "None" : s.join(', '); 
 }
 
@@ -116,9 +105,19 @@ function CheckboxLimit(checkgroup, limit) {
             var checkedcount = 0
             for (var i = 0; i < checkgroup.length; i++)
                 checkedcount += (checkgroup[i].checked) ? 1 : 0
-            if (checkedcount > limit) {
-                alert("You can only choose 3 favourite skins!")
-                this.checked = false
+            if (checkedcount >= limit) {
+                for (var i = 0; i < checkgroup.length; i++) {
+                    if (!checkgroup[i].checked) {
+                        checkgroup[i].disabled = true;
+                    } else {
+                        checkgroup[i].disabled = false;
+                    }
+                }
+            }
+            else {
+                for (var i = 0; i < checkgroup.length; i++) {
+                    checkgroup[i].disabled = false;
+                }
             }
         }
     }
